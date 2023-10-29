@@ -1,5 +1,5 @@
-namespaces:
-  country: http://www.nmatute.com/soapapisample/generated
+server:
+  port: 8080
 
 spring:
   main:

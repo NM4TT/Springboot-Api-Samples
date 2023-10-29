@@ -1,6 +1,5 @@
 package com.nmatute.soapapisample.web.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -15,17 +14,14 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
-import lombok.RequiredArgsConstructor;
-
 @EnableWs
 @Configuration
-@RequiredArgsConstructor
 public class WebServiceConfig extends WsConfigurerAdapter  {
 
     private final String[] URL_MAPPINGS = {"/api/v1/*"};
 
-	@Value("${namespace.country}")
-    private final String NAMESPACE_URI;
+	private final String NAMESPACE_URI = "http://www.nmatute.com/soapapisample/generated";
+    private String COUNTRY_NAMESPACE_URI = NAMESPACE_URI.concat("/country");
 
 	@Bean
 	public ServletRegistrationBean<MessageDispatcherServlet> 
@@ -46,7 +42,7 @@ public class WebServiceConfig extends WsConfigurerAdapter  {
 		wsdlDefinition.setLocationUri("/api/v1");
 		
 		wsdlDefinition
-			.setTargetNamespace(NAMESPACE_URI);
+			.setTargetNamespace(COUNTRY_NAMESPACE_URI);
 
 		wsdlDefinition.setSchema(schema);
 
@@ -58,7 +54,7 @@ public class WebServiceConfig extends WsConfigurerAdapter  {
 
     @Bean
     public XsdSchema countriesSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("Countries.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("schema/Countries.xsd"));
     }
 
 	@Bean

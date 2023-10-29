@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns:tns="http://www.nmatute.com/soapapisample/generated"
-    targetNamespace="http://www.nmatute.com/soapapisample/generated"
+    xmlns:tns="http://www.nmatute.com/soapapisample/generated/country"
+    targetNamespace="http://www.nmatute.com/soapapisample/generated/country"
     attributeFormDefault="qualified" 
     elementFormDefault="qualified">
 
