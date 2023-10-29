@@ -1,0 +1,6 @@
+namespaces:
+  country: http://www.nmatute.com/soapapisample/generated
+
+spring:
+  main:
+    banner-mode: off
