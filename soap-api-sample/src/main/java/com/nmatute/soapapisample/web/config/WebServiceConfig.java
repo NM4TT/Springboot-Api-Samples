@@ -54,7 +54,7 @@ public class WebServiceConfig extends WsConfigurerAdapter  {
 
     @Bean
     public XsdSchema countriesSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("schema/Countries.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("./schema/Countries.xsd"));
     }
 
 	@Bean
