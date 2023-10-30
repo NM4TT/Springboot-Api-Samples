@@ -42,4 +42,5 @@ soap-api-sample/.vscode/
 .vscode/
 
 ### API Temp ###
-soap-api-sample/src/main/java/META-INF/
+!soap-api-sample/src/main/java/META-INF/JAXB/episode_xjc.xjb
+soap-api-sample/src/main/java/META-INF/JAXB/*
