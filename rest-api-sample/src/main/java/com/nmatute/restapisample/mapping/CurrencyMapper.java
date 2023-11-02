@@ -1,6 +1,9 @@
 package com.nmatute.restapisample.mapping;
 
 import org.mapstruct.Mapper;
+
+import java.util.List;
+
 import org.mapstruct.InheritInverseConfiguration;
 
 import com.nmatute.restapisample.domain.dto.CountryDTO.CurrencyDTO;

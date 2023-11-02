@@ -26,7 +26,7 @@ public class CountryRepository {
         country1.setCapital("Madrid");
         country1.setCurrency(Currency.EUR);
         country1.setName("España");
-        country1.setPopulation(8000000);
+        country1.setPopulation(8000000L);
 
         countries.put("España", country1);
     }

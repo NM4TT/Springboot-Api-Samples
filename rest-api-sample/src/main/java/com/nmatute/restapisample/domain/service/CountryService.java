@@ -2,8 +2,9 @@ package com.nmatute.restapisample.domain.service;
 
 import org.springframework.stereotype.Service;
 
-import com.nmatute.soapapisample.generated.country.Country;
-import com.nmatute.soapapisample.persistence.repository.CountryRepository;
+import com.nmatute.restapisample.domain.dto.CountryDTO;
+import com.nmatute.restapisample.mapping.CountryMapper;
+import com.nmatute.restapisample.persistence.repository.CountryRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -12,9 +13,10 @@ import lombok.RequiredArgsConstructor;
 public class CountryService {
     
     private final CountryRepository countryRepository;
+    private final CountryMapper countryMapper;
 
-    public Country findCountry(String name) {
-        return countryRepository.getCountries().get(name);
+    public CountryDTO findCountry(String name) {
+        return countryMapper.toDTO(countryRepository.getCountries().get(name));
     }
 
 }

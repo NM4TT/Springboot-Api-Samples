@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LanguageDTO {
+public class CountryDTO {
     private String name;
     private String capital;
     private Long population;
@@ -23,7 +23,7 @@ public class LanguageDTO {
             return name();
         }
     
-        public static Currency fromValue(String v) {
+        public static CurrencyDTO fromValue(String v) {
             return valueOf(v);
         }
     
