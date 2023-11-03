@@ -1,0 +1,17 @@
+type Query {
+    countries: [Country]
+    countryByName(name: String): Country
+}
+
+type Country {
+    name: String
+    capital: String
+    population: Int
+    currency: Currency
+}
+
+enum Currency {
+    GBP
+    EUR
+    PLN
+}
