@@ -1,13 +1,13 @@
-package com.nmatute.grpcapisample;
+package com.nmatute.grpcclientsample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrpcapisampleApplication {
+public class GrpcClientSampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GrpcapisampleApplication.class, args);
+		SpringApplication.run(GrpcClientSampleApplication.class, args);
 	}
 
 }
