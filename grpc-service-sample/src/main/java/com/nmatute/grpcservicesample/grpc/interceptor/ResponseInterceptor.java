@@ -1,4 +1,4 @@
-package com.faxterol.grpcdemo;
+package com.nmatute.grpcservicesample.grpc.interceptor;
 
 import org.lognet.springboot.grpc.GRpcGlobalInterceptor;
 
@@ -10,7 +10,7 @@ import io.grpc.ServerCallHandler;
 import io.grpc.ServerInterceptor;
 
 @GRpcGlobalInterceptor
-public class GrpcDemoResponseInterceptor implements ServerInterceptor {
+public class ResponseInterceptor implements ServerInterceptor {
 
     @Override
     public <ReqT, RespT> Listener<ReqT> interceptCall(ServerCall<ReqT, RespT> call, Metadata headers,

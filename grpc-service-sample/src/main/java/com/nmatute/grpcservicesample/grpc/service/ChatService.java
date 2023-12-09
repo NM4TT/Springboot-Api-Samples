@@ -1,15 +1,14 @@
-package com.faxterol.grpcdemo.services;
+package com.nmatute.grpcservicesample.service;
 
-import com.faxterol.grpcdemo.interfaces.ChatServiceGrpc.ChatServiceImplBase;
+import com.nmatute.grpcinterface.generated.ReceiveMessage;
+import com.nmatute.grpcinterface.generated.SendMessage;
+import com.nmatute.grpcinterface.generated.ChatServiceGrpc.ChatServiceImplBase;
+import com.nmatute.grpcservicesample.grpc.stream.MultiplesMensajesStream;
+import com.nmatute.grpcservicesample.grpc.stream.MultiplesRespuestasStream;
 
 import java.util.Random;
 
 import org.lognet.springboot.grpc.GRpcService;
-
-import com.faxterol.grpcdemo.MultiplesMensajesStream;
-import com.faxterol.grpcdemo.MultiplesRespuestasStream;
-import com.faxterol.grpcdemo.interfaces.EnviarMensaje;
-import com.faxterol.grpcdemo.interfaces.RecibirMensaje;
 
 import io.grpc.stub.StreamObserver;
 
@@ -17,9 +16,9 @@ import io.grpc.stub.StreamObserver;
 public class ChatService extends ChatServiceImplBase{
 
     @Override
-    public void enviarMensaje(EnviarMensaje request, StreamObserver<RecibirMensaje> responseObserver) {
+    public void enviarMensaje(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
         //Crea la respuesta
-        RecibirMensaje response = RecibirMensaje.newBuilder()
+        ReceiveMessage response = ReceiveMessage.newBuilder()
                                         .setFrom(1)
                                         .setMessage("Hello back!")
                                         .build();
@@ -32,25 +31,25 @@ public class ChatService extends ChatServiceImplBase{
     }
 
     @Override
-    public StreamObserver<EnviarMensaje> enviarMultiplesMensajes(StreamObserver<RecibirMensaje> responseObserver) {
+    public StreamObserver<SendMessage> enviarMultiplesMensajes(StreamObserver<ReceiveMessage> responseObserver) {
         return new MultiplesMensajesStream(responseObserver);
         /*
          * Una solución alternativa es crear una clase anomina, esto es hacer el new StreamObserver e implementar los métodos necesarios. 
          */
-        //return new StreamObserver<EnviarMensaje>(){} 
+        //return new StreamObserver<SendMessage>(){} 
     }
 
     @Override
-    public StreamObserver<EnviarMensaje> enviarRecibirMultiplesMensajes(StreamObserver<RecibirMensaje> responseObserver) {
+    public StreamObserver<SendMessage> enviarRecibirMultiplesMensajes(StreamObserver<ReceiveMessage> responseObserver) {
         return new MultiplesRespuestasStream(responseObserver);
     }
 
     @Override
-    public void recibirMultiplesRespuestas(EnviarMensaje request, StreamObserver<RecibirMensaje> responseObserver) {
+    public void recibirMultiplesRespuestas(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
         Random random = new Random();
-        RecibirMensaje mensajeRespuesta = null;
+        ReceiveMessage mensajeRespuesta = null;
         for(int i=0;i<10;i++){
-            mensajeRespuesta = RecibirMensaje.newBuilder()
+            mensajeRespuesta = ReceiveMessage.newBuilder()
                                 .setFrom(random.nextInt())
                                 .setMessage("Hola stream desde servidor "+random.nextInt())
                                 .build();
