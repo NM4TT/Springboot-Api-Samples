@@ -6,15 +6,15 @@ import com.nmatute.grpcinterface.generated.SendMessage;
 import com.nmatute.grpcinterface.generated.ReceiveMessage;
 
 import io.grpc.stub.StreamObserver;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public class MultiResponseStream implements StreamObserver<SendMessage>{
-    private StreamObserver<ReceiveMessage> responseObserver;
+
     private Random random = new Random();
 
     //We need to inject the stream observer for sending responses to client
-    public MultiResponseStream(StreamObserver<ReceiveMessage> responseObserver){
-        this.responseObserver = responseObserver;
-    }
+    private final StreamObserver<ReceiveMessage> responseObserver;
 
 
     @Override

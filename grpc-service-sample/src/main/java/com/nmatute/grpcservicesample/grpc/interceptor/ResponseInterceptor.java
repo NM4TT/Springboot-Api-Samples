@@ -20,7 +20,6 @@ public class ResponseInterceptor implements ServerInterceptor {
          return next.startCall(new ResponseHandler<>(call),headers);
     }
     
-
     private class ResponseHandler<ReqT, RespT> extends ForwardingServerCall.SimpleForwardingServerCall<ReqT, RespT>{
 
         ResponseHandler(ServerCall<ReqT, RespT> serverCall) {
