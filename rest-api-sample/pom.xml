@@ -8,7 +8,7 @@
 		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nmatute</groupId>
+	<groupId>com.nmatute.springboot</groupId>
 	<artifactId>rest-api-sample</artifactId>
 	<version>1.0.0-RELEASE</version>
 	<name>rest-api-sample</name>

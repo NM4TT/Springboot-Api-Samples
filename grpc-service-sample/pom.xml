@@ -10,7 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.nmatute</groupId>
+	<groupId>com.nmatute.springboot</groupId>
 	<artifactId>grpc-service-sample</artifactId>
 	<version>1.0.0</version>
 	<name>grpc-service-sample</name>
