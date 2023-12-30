@@ -10,13 +10,13 @@ option java_outer_classname = "ChatServiceProto";
 
 service ChatService {
     //Unary Communication
-    rpc enviarMensaje (SendMessage) returns (ReceiveMessage) {}
+    rpc sendMessage (SendMessage) returns (ReceiveMessage) {}
     //Unidirectional Stream client -> server
-    rpc enviarMultiplesMensajes (stream SendMessage) returns (ReceiveMessage) {}
+    rpc sendMultipleMessages (stream SendMessage) returns (ReceiveMessage) {}
     //Unidirectional Stream server -> client
-    rpc recibirMultiplesRespuestas (SendMessage) returns (stream ReceiveMessage) {}
+    rpc receiveMultipleMessages (SendMessage) returns (stream ReceiveMessage) {}
     //Bidirectional Stream
-    rpc enviarRecibirMultiplesMensajes (stream SendMessage) returns (stream ReceiveMessage) {}
+    rpc sendAndReceiveMultipleMessages (stream SendMessage) returns (stream ReceiveMessage) {}
 }
 
 message SendMessage {

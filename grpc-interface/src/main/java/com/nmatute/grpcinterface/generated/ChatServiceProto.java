@@ -37,22 +37,22 @@ public final class ChatServiceProto {
       "te.grpcinterface.generated\"*\n\013SendMessag" +
       "e\022\n\n\002to\030\001 \001(\r\022\017\n\007message\030\002 \001(\t\"/\n\016Receiv" +
       "eMessage\022\014\n\004from\030\001 \001(\r\022\017\n\007message\030\002 \001(\t2" +
-      "\250\004\n\013ChatService\022x\n\renviarMensaje\0220.com.n" +
-      "matute.grpcinterface.generated.SendMessa" +
-      "ge\0323.com.nmatute.grpcinterface.generated" +
-      ".ReceiveMessage\"\000\022\204\001\n\027enviarMultiplesMen" +
-      "sajes\0220.com.nmatute.grpcinterface.genera" +
-      "ted.SendMessage\0323.com.nmatute.grpcinterf" +
-      "ace.generated.ReceiveMessage\"\000(\001\022\207\001\n\032rec" +
-      "ibirMultiplesRespuestas\0220.com.nmatute.gr" +
-      "pcinterface.generated.SendMessage\0323.com." +
-      "nmatute.grpcinterface.generated.ReceiveM" +
-      "essage\"\0000\001\022\215\001\n\036enviarRecibirMultiplesMen" +
-      "sajes\0220.com.nmatute.grpcinterface.genera" +
-      "ted.SendMessage\0323.com.nmatute.grpcinterf" +
-      "ace.generated.ReceiveMessage\"\000(\0010\001B9\n#co" +
-      "m.nmatute.grpcinterface.generatedB\020ChatS" +
-      "erviceProtoP\001b\006proto3"
+      "\240\004\n\013ChatService\022v\n\013sendMessage\0220.com.nma" +
+      "tute.grpcinterface.generated.SendMessage" +
+      "\0323.com.nmatute.grpcinterface.generated.R" +
+      "eceiveMessage\"\000\022\201\001\n\024sendMultipleMessages" +
+      "\0220.com.nmatute.grpcinterface.generated.S" +
+      "endMessage\0323.com.nmatute.grpcinterface.g" +
+      "enerated.ReceiveMessage\"\000(\001\022\204\001\n\027receiveM" +
+      "ultipleMessages\0220.com.nmatute.grpcinterf" +
+      "ace.generated.SendMessage\0323.com.nmatute." +
+      "grpcinterface.generated.ReceiveMessage\"\000" +
+      "0\001\022\215\001\n\036sendAndReceiveMultipleMessages\0220." +
+      "com.nmatute.grpcinterface.generated.Send" +
+      "Message\0323.com.nmatute.grpcinterface.gene" +
+      "rated.ReceiveMessage\"\000(\0010\001B9\n#com.nmatut" +
+      "e.grpcinterface.generatedB\020ChatServicePr" +
+      "otoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

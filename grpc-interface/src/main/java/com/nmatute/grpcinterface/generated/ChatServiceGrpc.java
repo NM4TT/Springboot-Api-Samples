@@ -16,127 +16,127 @@ public final class ChatServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMensajeMethod;
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMessageMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "enviarMensaje",
+      fullMethodName = SERVICE_NAME + '/' + "sendMessage",
       requestType = com.nmatute.grpcinterface.generated.SendMessage.class,
       responseType = com.nmatute.grpcinterface.generated.ReceiveMessage.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMensajeMethod() {
-    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMensajeMethod;
-    if ((getEnviarMensajeMethod = ChatServiceGrpc.getEnviarMensajeMethod) == null) {
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMessageMethod() {
+    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMessageMethod;
+    if ((getSendMessageMethod = ChatServiceGrpc.getSendMessageMethod) == null) {
       synchronized (ChatServiceGrpc.class) {
-        if ((getEnviarMensajeMethod = ChatServiceGrpc.getEnviarMensajeMethod) == null) {
-          ChatServiceGrpc.getEnviarMensajeMethod = getEnviarMensajeMethod =
+        if ((getSendMessageMethod = ChatServiceGrpc.getSendMessageMethod) == null) {
+          ChatServiceGrpc.getSendMessageMethod = getSendMessageMethod =
               io.grpc.MethodDescriptor.<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "enviarMensaje"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.SendMessage.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.ReceiveMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("enviarMensaje"))
+              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("sendMessage"))
               .build();
         }
       }
     }
-    return getEnviarMensajeMethod;
+    return getSendMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMultiplesMensajesMethod;
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMultipleMessagesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "enviarMultiplesMensajes",
+      fullMethodName = SERVICE_NAME + '/' + "sendMultipleMessages",
       requestType = com.nmatute.grpcinterface.generated.SendMessage.class,
       responseType = com.nmatute.grpcinterface.generated.ReceiveMessage.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMultiplesMensajesMethod() {
-    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarMultiplesMensajesMethod;
-    if ((getEnviarMultiplesMensajesMethod = ChatServiceGrpc.getEnviarMultiplesMensajesMethod) == null) {
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMultipleMessagesMethod() {
+    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getSendMultipleMessagesMethod;
+    if ((getSendMultipleMessagesMethod = ChatServiceGrpc.getSendMultipleMessagesMethod) == null) {
       synchronized (ChatServiceGrpc.class) {
-        if ((getEnviarMultiplesMensajesMethod = ChatServiceGrpc.getEnviarMultiplesMensajesMethod) == null) {
-          ChatServiceGrpc.getEnviarMultiplesMensajesMethod = getEnviarMultiplesMensajesMethod =
+        if ((getSendMultipleMessagesMethod = ChatServiceGrpc.getSendMultipleMessagesMethod) == null) {
+          ChatServiceGrpc.getSendMultipleMessagesMethod = getSendMultipleMessagesMethod =
               io.grpc.MethodDescriptor.<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "enviarMultiplesMensajes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendMultipleMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.SendMessage.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.ReceiveMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("enviarMultiplesMensajes"))
+              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("sendMultipleMessages"))
               .build();
         }
       }
     }
-    return getEnviarMultiplesMensajesMethod;
+    return getSendMultipleMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getRecibirMultiplesRespuestasMethod;
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getReceiveMultipleMessagesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "recibirMultiplesRespuestas",
+      fullMethodName = SERVICE_NAME + '/' + "receiveMultipleMessages",
       requestType = com.nmatute.grpcinterface.generated.SendMessage.class,
       responseType = com.nmatute.grpcinterface.generated.ReceiveMessage.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getRecibirMultiplesRespuestasMethod() {
-    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getRecibirMultiplesRespuestasMethod;
-    if ((getRecibirMultiplesRespuestasMethod = ChatServiceGrpc.getRecibirMultiplesRespuestasMethod) == null) {
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getReceiveMultipleMessagesMethod() {
+    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getReceiveMultipleMessagesMethod;
+    if ((getReceiveMultipleMessagesMethod = ChatServiceGrpc.getReceiveMultipleMessagesMethod) == null) {
       synchronized (ChatServiceGrpc.class) {
-        if ((getRecibirMultiplesRespuestasMethod = ChatServiceGrpc.getRecibirMultiplesRespuestasMethod) == null) {
-          ChatServiceGrpc.getRecibirMultiplesRespuestasMethod = getRecibirMultiplesRespuestasMethod =
+        if ((getReceiveMultipleMessagesMethod = ChatServiceGrpc.getReceiveMultipleMessagesMethod) == null) {
+          ChatServiceGrpc.getReceiveMultipleMessagesMethod = getReceiveMultipleMessagesMethod =
               io.grpc.MethodDescriptor.<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "recibirMultiplesRespuestas"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "receiveMultipleMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.SendMessage.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.ReceiveMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("recibirMultiplesRespuestas"))
+              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("receiveMultipleMessages"))
               .build();
         }
       }
     }
-    return getRecibirMultiplesRespuestasMethod;
+    return getReceiveMultipleMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarRecibirMultiplesMensajesMethod;
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendAndReceiveMultipleMessagesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "enviarRecibirMultiplesMensajes",
+      fullMethodName = SERVICE_NAME + '/' + "sendAndReceiveMultipleMessages",
       requestType = com.nmatute.grpcinterface.generated.SendMessage.class,
       responseType = com.nmatute.grpcinterface.generated.ReceiveMessage.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage,
-      com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarRecibirMultiplesMensajesMethod() {
-    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getEnviarRecibirMultiplesMensajesMethod;
-    if ((getEnviarRecibirMultiplesMensajesMethod = ChatServiceGrpc.getEnviarRecibirMultiplesMensajesMethod) == null) {
+      com.nmatute.grpcinterface.generated.ReceiveMessage> getSendAndReceiveMultipleMessagesMethod() {
+    io.grpc.MethodDescriptor<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage> getSendAndReceiveMultipleMessagesMethod;
+    if ((getSendAndReceiveMultipleMessagesMethod = ChatServiceGrpc.getSendAndReceiveMultipleMessagesMethod) == null) {
       synchronized (ChatServiceGrpc.class) {
-        if ((getEnviarRecibirMultiplesMensajesMethod = ChatServiceGrpc.getEnviarRecibirMultiplesMensajesMethod) == null) {
-          ChatServiceGrpc.getEnviarRecibirMultiplesMensajesMethod = getEnviarRecibirMultiplesMensajesMethod =
+        if ((getSendAndReceiveMultipleMessagesMethod = ChatServiceGrpc.getSendAndReceiveMultipleMessagesMethod) == null) {
+          ChatServiceGrpc.getSendAndReceiveMultipleMessagesMethod = getSendAndReceiveMultipleMessagesMethod =
               io.grpc.MethodDescriptor.<com.nmatute.grpcinterface.generated.SendMessage, com.nmatute.grpcinterface.generated.ReceiveMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "enviarRecibirMultiplesMensajes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendAndReceiveMultipleMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.SendMessage.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.nmatute.grpcinterface.generated.ReceiveMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("enviarRecibirMultiplesMensajes"))
+              .setSchemaDescriptor(new ChatServiceMethodDescriptorSupplier("sendAndReceiveMultipleMessages"))
               .build();
         }
       }
     }
-    return getEnviarRecibirMultiplesMensajesMethod;
+    return getSendAndReceiveMultipleMessagesMethod;
   }
 
   /**
@@ -192,9 +192,9 @@ public final class ChatServiceGrpc {
      *Unary Communication
      * </pre>
      */
-    public void enviarMensaje(com.nmatute.grpcinterface.generated.SendMessage request,
+    public void sendMessage(com.nmatute.grpcinterface.generated.SendMessage request,
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnviarMensajeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
     }
 
     /**
@@ -202,9 +202,9 @@ public final class ChatServiceGrpc {
      *Unidirectional Stream client -&gt; server
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> enviarMultiplesMensajes(
+    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> sendMultipleMessages(
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
-      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getEnviarMultiplesMensajesMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getSendMultipleMessagesMethod(), responseObserver);
     }
 
     /**
@@ -212,9 +212,9 @@ public final class ChatServiceGrpc {
      *Unidirectional Stream server -&gt; client
      * </pre>
      */
-    public void recibirMultiplesRespuestas(com.nmatute.grpcinterface.generated.SendMessage request,
+    public void receiveMultipleMessages(com.nmatute.grpcinterface.generated.SendMessage request,
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRecibirMultiplesRespuestasMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReceiveMultipleMessagesMethod(), responseObserver);
     }
 
     /**
@@ -222,41 +222,41 @@ public final class ChatServiceGrpc {
      *Bidirectional Stream
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> enviarRecibirMultiplesMensajes(
+    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> sendAndReceiveMultipleMessages(
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
-      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getEnviarRecibirMultiplesMensajesMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getSendAndReceiveMultipleMessagesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getEnviarMensajeMethod(),
+            getSendMessageMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.nmatute.grpcinterface.generated.SendMessage,
                 com.nmatute.grpcinterface.generated.ReceiveMessage>(
-                  this, METHODID_ENVIAR_MENSAJE)))
+                  this, METHODID_SEND_MESSAGE)))
           .addMethod(
-            getEnviarMultiplesMensajesMethod(),
+            getSendMultipleMessagesMethod(),
             io.grpc.stub.ServerCalls.asyncClientStreamingCall(
               new MethodHandlers<
                 com.nmatute.grpcinterface.generated.SendMessage,
                 com.nmatute.grpcinterface.generated.ReceiveMessage>(
-                  this, METHODID_ENVIAR_MULTIPLES_MENSAJES)))
+                  this, METHODID_SEND_MULTIPLE_MESSAGES)))
           .addMethod(
-            getRecibirMultiplesRespuestasMethod(),
+            getReceiveMultipleMessagesMethod(),
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.nmatute.grpcinterface.generated.SendMessage,
                 com.nmatute.grpcinterface.generated.ReceiveMessage>(
-                  this, METHODID_RECIBIR_MULTIPLES_RESPUESTAS)))
+                  this, METHODID_RECEIVE_MULTIPLE_MESSAGES)))
           .addMethod(
-            getEnviarRecibirMultiplesMensajesMethod(),
+            getSendAndReceiveMultipleMessagesMethod(),
             io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 com.nmatute.grpcinterface.generated.SendMessage,
                 com.nmatute.grpcinterface.generated.ReceiveMessage>(
-                  this, METHODID_ENVIAR_RECIBIR_MULTIPLES_MENSAJES)))
+                  this, METHODID_SEND_AND_RECEIVE_MULTIPLE_MESSAGES)))
           .build();
     }
   }
@@ -280,10 +280,10 @@ public final class ChatServiceGrpc {
      *Unary Communication
      * </pre>
      */
-    public void enviarMensaje(com.nmatute.grpcinterface.generated.SendMessage request,
+    public void sendMessage(com.nmatute.grpcinterface.generated.SendMessage request,
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getEnviarMensajeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSendMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class ChatServiceGrpc {
      *Unidirectional Stream client -&gt; server
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> enviarMultiplesMensajes(
+    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> sendMultipleMessages(
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
-          getChannel().newCall(getEnviarMultiplesMensajesMethod(), getCallOptions()), responseObserver);
+          getChannel().newCall(getSendMultipleMessagesMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class ChatServiceGrpc {
      *Unidirectional Stream server -&gt; client
      * </pre>
      */
-    public void recibirMultiplesRespuestas(com.nmatute.grpcinterface.generated.SendMessage request,
+    public void receiveMultipleMessages(com.nmatute.grpcinterface.generated.SendMessage request,
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getRecibirMultiplesRespuestasMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getReceiveMultipleMessagesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -313,10 +313,10 @@ public final class ChatServiceGrpc {
      *Bidirectional Stream
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> enviarRecibirMultiplesMensajes(
+    public io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.SendMessage> sendAndReceiveMultipleMessages(
         io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
-          getChannel().newCall(getEnviarRecibirMultiplesMensajesMethod(), getCallOptions()), responseObserver);
+          getChannel().newCall(getSendAndReceiveMultipleMessagesMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -339,9 +339,9 @@ public final class ChatServiceGrpc {
      *Unary Communication
      * </pre>
      */
-    public com.nmatute.grpcinterface.generated.ReceiveMessage enviarMensaje(com.nmatute.grpcinterface.generated.SendMessage request) {
+    public com.nmatute.grpcinterface.generated.ReceiveMessage sendMessage(com.nmatute.grpcinterface.generated.SendMessage request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getEnviarMensajeMethod(), getCallOptions(), request);
+          getChannel(), getSendMessageMethod(), getCallOptions(), request);
     }
 
     /**
@@ -349,10 +349,10 @@ public final class ChatServiceGrpc {
      *Unidirectional Stream server -&gt; client
      * </pre>
      */
-    public java.util.Iterator<com.nmatute.grpcinterface.generated.ReceiveMessage> recibirMultiplesRespuestas(
+    public java.util.Iterator<com.nmatute.grpcinterface.generated.ReceiveMessage> receiveMultipleMessages(
         com.nmatute.grpcinterface.generated.SendMessage request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getRecibirMultiplesRespuestasMethod(), getCallOptions(), request);
+          getChannel(), getReceiveMultipleMessagesMethod(), getCallOptions(), request);
     }
   }
 
@@ -375,17 +375,17 @@ public final class ChatServiceGrpc {
      *Unary Communication
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.nmatute.grpcinterface.generated.ReceiveMessage> enviarMensaje(
+    public com.google.common.util.concurrent.ListenableFuture<com.nmatute.grpcinterface.generated.ReceiveMessage> sendMessage(
         com.nmatute.grpcinterface.generated.SendMessage request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getEnviarMensajeMethod(), getCallOptions()), request);
+          getChannel().newCall(getSendMessageMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_ENVIAR_MENSAJE = 0;
-  private static final int METHODID_RECIBIR_MULTIPLES_RESPUESTAS = 1;
-  private static final int METHODID_ENVIAR_MULTIPLES_MENSAJES = 2;
-  private static final int METHODID_ENVIAR_RECIBIR_MULTIPLES_MENSAJES = 3;
+  private static final int METHODID_SEND_MESSAGE = 0;
+  private static final int METHODID_RECEIVE_MULTIPLE_MESSAGES = 1;
+  private static final int METHODID_SEND_MULTIPLE_MESSAGES = 2;
+  private static final int METHODID_SEND_AND_RECEIVE_MULTIPLE_MESSAGES = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -404,12 +404,12 @@ public final class ChatServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ENVIAR_MENSAJE:
-          serviceImpl.enviarMensaje((com.nmatute.grpcinterface.generated.SendMessage) request,
+        case METHODID_SEND_MESSAGE:
+          serviceImpl.sendMessage((com.nmatute.grpcinterface.generated.SendMessage) request,
               (io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage>) responseObserver);
           break;
-        case METHODID_RECIBIR_MULTIPLES_RESPUESTAS:
-          serviceImpl.recibirMultiplesRespuestas((com.nmatute.grpcinterface.generated.SendMessage) request,
+        case METHODID_RECEIVE_MULTIPLE_MESSAGES:
+          serviceImpl.receiveMultipleMessages((com.nmatute.grpcinterface.generated.SendMessage) request,
               (io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage>) responseObserver);
           break;
         default:
@@ -422,11 +422,11 @@ public final class ChatServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ENVIAR_MULTIPLES_MENSAJES:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.enviarMultiplesMensajes(
+        case METHODID_SEND_MULTIPLE_MESSAGES:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendMultipleMessages(
               (io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage>) responseObserver);
-        case METHODID_ENVIAR_RECIBIR_MULTIPLES_MENSAJES:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.enviarRecibirMultiplesMensajes(
+        case METHODID_SEND_AND_RECEIVE_MULTIPLE_MESSAGES:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendAndReceiveMultipleMessages(
               (io.grpc.stub.StreamObserver<com.nmatute.grpcinterface.generated.ReceiveMessage>) responseObserver);
         default:
           throw new AssertionError();
@@ -479,10 +479,10 @@ public final class ChatServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ChatServiceFileDescriptorSupplier())
-              .addMethod(getEnviarMensajeMethod())
-              .addMethod(getEnviarMultiplesMensajesMethod())
-              .addMethod(getRecibirMultiplesRespuestasMethod())
-              .addMethod(getEnviarRecibirMultiplesMensajesMethod())
+              .addMethod(getSendMessageMethod())
+              .addMethod(getSendMultipleMessagesMethod())
+              .addMethod(getReceiveMultipleMessagesMethod())
+              .addMethod(getSendAndReceiveMultipleMessagesMethod())
               .build();
         }
       }

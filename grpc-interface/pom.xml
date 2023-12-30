@@ -13,6 +13,8 @@
     <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
     <grpc.version>1.47.0</grpc.version>
     <java.version>17</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
   
 

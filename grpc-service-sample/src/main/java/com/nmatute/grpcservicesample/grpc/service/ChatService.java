@@ -1,10 +1,10 @@
-package com.nmatute.grpcservicesample.service;
+package com.nmatute.grpcservicesample.grpc.service;
 
 import com.nmatute.grpcinterface.generated.ReceiveMessage;
 import com.nmatute.grpcinterface.generated.SendMessage;
 import com.nmatute.grpcinterface.generated.ChatServiceGrpc.ChatServiceImplBase;
-import com.nmatute.grpcservicesample.grpc.stream.MultiplesMensajesStream;
-import com.nmatute.grpcservicesample.grpc.stream.MultiplesRespuestasStream;
+import com.nmatute.grpcservicesample.grpc.stream.MultiRequestStream;
+import com.nmatute.grpcservicesample.grpc.stream.MultiResponseStream;
 
 import java.util.Random;
 
@@ -16,44 +16,45 @@ import io.grpc.stub.StreamObserver;
 public class ChatService extends ChatServiceImplBase{
 
     @Override
-    public void enviarMensaje(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
-        //Crea la respuesta
+    public void sendMessage(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
+        //Creates response
         ReceiveMessage response = ReceiveMessage.newBuilder()
                                         .setFrom(1)
                                         .setMessage("Hello back!")
                                         .build();
 
-        //Envia el mensaje
+        //Sends resposne
         responseObserver.onNext(response);
 
-        //Cierra la conexión
+        //Closes connection
         responseObserver.onCompleted();
     }
 
     @Override
-    public StreamObserver<SendMessage> enviarMultiplesMensajes(StreamObserver<ReceiveMessage> responseObserver) {
-        return new MultiplesMensajesStream(responseObserver);
+    public StreamObserver<SendMessage> sendMultipleMessages(StreamObserver<ReceiveMessage> responseObserver) {
+        return new MultiRequestStream(responseObserver);
         /*
-         * Una solución alternativa es crear una clase anomina, esto es hacer el new StreamObserver e implementar los métodos necesarios. 
+         * An alternative solution is to create an anonym class. 
+         * This means to define the StreamObserver and implement the required methods
          */
         //return new StreamObserver<SendMessage>(){} 
     }
 
     @Override
-    public StreamObserver<SendMessage> enviarRecibirMultiplesMensajes(StreamObserver<ReceiveMessage> responseObserver) {
-        return new MultiplesRespuestasStream(responseObserver);
+    public StreamObserver<SendMessage> sendAndReceiveMultipleMessages(StreamObserver<ReceiveMessage> responseObserver) {
+        return new MultiResponseStream(responseObserver);
     }
 
     @Override
-    public void recibirMultiplesRespuestas(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
+    public void receiveMultipleMessages(SendMessage request, StreamObserver<ReceiveMessage> responseObserver) {
         Random random = new Random();
-        ReceiveMessage mensajeRespuesta = null;
+        ReceiveMessage responseMessage = null;
         for(int i=0;i<10;i++){
-            mensajeRespuesta = ReceiveMessage.newBuilder()
+            responseMessage = ReceiveMessage.newBuilder()
                                 .setFrom(random.nextInt())
-                                .setMessage("Hola stream desde servidor "+random.nextInt())
+                                .setMessage("Hi stream from server ".concat(String.valueOf(random.nextInt())))
                                 .build();
-            responseObserver.onNext(mensajeRespuesta);
+            responseObserver.onNext(responseMessage);
         }
 
         responseObserver.onCompleted();
