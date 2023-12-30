@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.nmatute</groupId>
+	<groupId>com.nmatute.springboot</groupId>
 	<artifactId>soap-api-sample</artifactId>
 	<version>1.0.0-RELEASE</version>
 	<name>soap-api-sample</name>
@@ -66,12 +66,6 @@
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			
 		</dependency>
 
 		<dependency>
